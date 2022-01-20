@@ -1,3 +1,3 @@
-This is an example of how to send a transaction on a backend, using an Authorization Function.
+This extends upon the previous example (on the main branch) by showing how to add public keys to an account and sending transactions very quickly by rotating public keys.
 
-This is also the source code for this YouTube video: https://www.youtube.com/watch?v=VEbQYACodqg
+This is also the source code for this YouTube video: [being posted soon]

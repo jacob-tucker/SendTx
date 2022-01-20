@@ -4,7 +4,7 @@
 const fcl = require("@onflow/fcl");
 const t = require("@onflow/types");
 
-const {authorizationFunction} = require("./helpers/authorization.js");
+const {authorizationFunction, authorizationFunctionProposer} = require("./helpers/authorization.js");
 
 fcl.config()
     .put("accessNode.api", "https://testnet.onflow.org");
@@ -24,7 +24,7 @@ const sendTx = async () => {
       fcl.arg(1, t.Int),
       fcl.arg("Hello", t.String)
     ]),
-    fcl.proposer(authorizationFunction),
+    fcl.proposer(authorizationFunctionProposer),
     fcl.payer(authorizationFunction),
     fcl.authorizations([authorizationFunction]),
     fcl.limit(9999)
@@ -33,4 +33,6 @@ const sendTx = async () => {
   console.log(transactionId);
 }
 
+sendTx();
+sendTx();
 sendTx();
